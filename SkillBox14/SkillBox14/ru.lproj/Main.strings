@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Последние введенные данные"; ObjectID = "BFm-bC-NhX"; */
+"BFm-bC-NhX.text" = "Последние введенные данные";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Ie0-zU-B7K"; */
+"Ie0-zU-B7K.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Todo"; ObjectID = "JYq-ZK-h2z"; */
+"JYq-ZK-h2z.normalTitle" = "Todo";
+
+/* Class = "UITextField"; placeholder = "Введите Имя"; ObjectID = "Kdl-Bm-VQV"; */
+"Kdl-Bm-VQV.placeholder" = "Введите Имя";
+
+/* Class = "UINavigationItem"; title = "Task List"; ObjectID = "NqW-ZX-Ega"; */
+"NqW-ZX-Ega.title" = "Task List";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OKT-ID-bzo"; */
+"OKT-ID-bzo.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TcY-Ys-jou"; */
+"TcY-Ys-jou.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Введите фамилию"; ObjectID = "VfR-Iw-ceh"; */
+"VfR-Iw-ceh.placeholder" = "Введите фамилию";
+
+/* Class = "UILabel"; text = "12"; ObjectID = "Zk8-8b-Gvd"; */
+"Zk8-8b-Gvd.text" = "12";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "czy-wW-35H"; */
+"czy-wW-35H.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kkR-2l-ZIr"; */
+"kkR-2l-ZIr.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "orK-Ns-9SV"; */
+"orK-Ns-9SV.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "UserDefaults"; ObjectID = "uYq-lE-zCc"; */
+"uYq-lE-zCc.normalTitle" = "UserDefaults";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "yM7-FZ-9Vd"; */
+"yM7-FZ-9Vd.text" = "Detail";
