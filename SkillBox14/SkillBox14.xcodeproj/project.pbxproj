@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2DF779C1C0A7CC1B2BE16F4D /* Pods_SkillBox14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D31D750086A003EEE0DCD5 /* Pods_SkillBox14.framework */; };
-		4273FA532396F5C10090D0E6 /* NewTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4273FA522396F5C10090D0E6 /* NewTask.swift */; };
 		428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B52392E49400AC1F8A /* AppDelegate.swift */; };
 		428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B72392E49400AC1F8A /* SceneDelegate.swift */; };
 		428E04BA2392E49400AC1F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B92392E49400AC1F8A /* ViewController.swift */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4273FA522396F5C10090D0E6 /* NewTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTask.swift; sourceTree = "<group>"; };
 		428E04B22392E49400AC1F8A /* SkillBox14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillBox14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428E04B52392E49400AC1F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428E04B72392E49400AC1F8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,17 +62,8 @@
 				42A1EB3A239D2EBD00E840BC /* Realm */,
 				42C06FCA2393FD5C001CE0AD /* TaskList.swift */,
 				42C06FCC2393FD77001CE0AD /* Task.swift */,
-				4273FA512396F5A40090D0E6 /* New Task */,
 			);
 			path = Todo;
-			sourceTree = "<group>";
-		};
-		4273FA512396F5A40090D0E6 /* New Task */ = {
-			isa = PBXGroup;
-			children = (
-				4273FA522396F5C10090D0E6 /* NewTask.swift */,
-			);
-			path = "New Task";
 			sourceTree = "<group>";
 		};
 		428E04A92392E49400AC1F8A = {
@@ -265,7 +254,6 @@
 				42C06FCD2393FD77001CE0AD /* Task.swift in Sources */,
 				42C06FCB2393FD5C001CE0AD /* TaskList.swift in Sources */,
 				428E04BA2392E49400AC1F8A /* ViewController.swift in Sources */,
-				4273FA532396F5C10090D0E6 /* NewTask.swift in Sources */,
 				428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */,
 				428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */,
 				428E04CD2392ED5A00AC1F8A /* Persistance.swift in Sources */,

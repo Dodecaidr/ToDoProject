@@ -55,6 +55,7 @@ class StorageManager {
                 realm.add(newTask)
             }
         }
+        
     }
     
     static func deleteObject(for task: TaskListToDoModel) {
@@ -75,11 +76,13 @@ class StorageManager {
         }
     }
     
-    static func deleteObjectTask(_ taskToDo: TaskToDo) {
+    static func deleteObjectTask(for task: TaskToDoModel) {
         let realms = try! Realm()
+        let predicate = NSPredicate(format: "id == %@", argumentArray: [task.id])
+        if let object = realms.objects(TaskToDo.self).filter(predicate).first {
         try! realms.write {
-            realms.delete(taskToDo)
+            realms.delete(object)
+        }
         }
     }
-    
 }

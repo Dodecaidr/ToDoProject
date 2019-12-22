@@ -28,6 +28,7 @@ struct TaskToDoModel {
     var name: String
     var notes: String
     var isCompleted: Bool
+    
 }
 
 struct TaskListToDoModel {
