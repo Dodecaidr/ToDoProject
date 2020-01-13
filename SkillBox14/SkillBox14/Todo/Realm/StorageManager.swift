@@ -29,11 +29,16 @@ class StorageManager {
         let realm = try! Realm()
         let predicate = NSPredicate(format: "id == %@", argumentArray: [task.id])
         if let object = realm.objects(TaskListToDo.self).filter(predicate).first {
+             // if let object = task.filter({$0.id == task?.id}) {
+            //            let objectsFilter = realm.objects(TaskListToDo.self).filter(predicate)
+            //            let objectFilter = objectsFilter.filter({$0.id == task.id})
+            //            if let object = objectFilter.first {
             try! realm.write {
                 object.name = task.name
                 realm.delete(object.tasks)
                 task.tasks.forEach {
                     let todo = TaskToDo()
+                    todo.id = $0.id
                     todo.name = $0.name
                     todo.notes = $0.notes
                     todo.isCompleted = $0.isCompleted
@@ -43,9 +48,11 @@ class StorageManager {
         }
         else {
             let newTask = TaskListToDo()
+            newTask.id = task.id
             newTask.name = task.name
             task.tasks.forEach {
                 let newTodo = TaskToDo()
+                newTodo.id = $0.id
                 newTodo.name = $0.name
                 newTodo.notes = $0.notes
                 newTodo.isCompleted = $0.isCompleted

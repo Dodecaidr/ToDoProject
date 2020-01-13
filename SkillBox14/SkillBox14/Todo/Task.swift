@@ -35,7 +35,7 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return
         }
         token = realm.observe({ (_, _) in
-            self.updateModels()
+            //self.updateModels()
             DispatchQueue.main.async {
                 self.tableTask.reloadData()
             }
@@ -44,11 +44,12 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func updateModels() {
         var models: [TaskListToDoModel] = []
         models = StorageManager.tasks()
-        let asdf = models.filter({$0.id == model?.id})
-        model = asdf.first
+        let modelsFilter = models.filter({/*$0.id == self.model?.id*/self.model?.id == $0.id})
+        model = modelsFilter.first
         DispatchQueue.main.async {
             self.tableTask.reloadData()
         }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,16 +69,16 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-            let actionDelete = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
-                guard let model = self.model else {
-                    return
-                }
-                let taskDelete = model.tasks[indexPath.row]
-                StorageManager.deleteObjectTask(for: taskDelete)
-                self.token?.invalidate()
+        let actionDelete = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
+            guard let model = self.model else {
+                return
             }
-            return UISwipeActionsConfiguration(actions: [actionDelete])
+            let taskDelete = model.tasks[indexPath.row]
+            StorageManager.deleteObjectTask(for: taskDelete)
+            self.token?.invalidate()
         }
+        return UISwipeActionsConfiguration(actions: [actionDelete])
+    }
     
     @IBAction func addTaskButton(_ sender: Any) {
         
@@ -100,16 +101,17 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 model.tasks.append(subtask)
                 StorageManager.saveObject(for: model)
                 self.token?.invalidate()
+                self.updateModels()
             }
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionAdd.addAction(okAction)
+        actionAdd.addAction(cancelAction)
+        
+        self.present(actionAdd, animated: true, completion: nil)
+        
+    }
     
-    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
-    
-    actionAdd.addAction(okAction)
-    actionAdd.addAction(cancelAction)
-    
-    self.present(actionAdd, animated: true, completion: nil)
-    
-}
-
 }
