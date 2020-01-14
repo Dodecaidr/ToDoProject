@@ -76,6 +76,7 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let taskDelete = model.tasks[indexPath.row]
             StorageManager.deleteObjectTask(for: taskDelete)
             self.token?.invalidate()
+            self.updateModels()
         }
         return UISwipeActionsConfiguration(actions: [actionDelete])
     }
