@@ -85,7 +85,7 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let actionAdd = UIAlertController(title: "New Task", message: nil, preferredStyle: .alert)
         actionAdd.addTextField { (nameTask) in
-            nameTask.autocapitalizationType = .sentences
+            nameTask.autocapitalizationType = .sentences //Для ввода с заглавной буквы
             nameTask.placeholder = "Name New Task"
         }
         actionAdd.addTextField { (notesTask) in

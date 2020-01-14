@@ -16,6 +16,7 @@
 		428E04C22392E49500AC1F8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428E04C02392E49500AC1F8A /* LaunchScreen.storyboard */; };
 		428E04CB2392EB4B00AC1F8A /* UserDefaultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04CA2392EB4B00AC1F8A /* UserDefaultsView.swift */; };
 		428E04CD2392ED5A00AC1F8A /* Persistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04CC2392ED5A00AC1F8A /* Persistance.swift */; };
+		4296BF9423CE5A000098CA91 /* CoreDataToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4296BF9323CE5A000098CA91 /* CoreDataToDoViewController.swift */; };
 		42A1EB39239D2E2E00E840BC /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A1EB38239D2E2E00E840BC /* StorageManager.swift */; };
 		42C06FC92393CB2D001CE0AD /* RealmToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C06FC82393CB2D001CE0AD /* RealmToDo.swift */; };
 		42C06FCB2393FD5C001CE0AD /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C06FCA2393FD5C001CE0AD /* TaskList.swift */; };
@@ -33,6 +34,7 @@
 		428E04C32392E49500AC1F8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		428E04CA2392EB4B00AC1F8A /* UserDefaultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsView.swift; sourceTree = "<group>"; };
 		428E04CC2392ED5A00AC1F8A /* Persistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistance.swift; sourceTree = "<group>"; };
+		4296BF9323CE5A000098CA91 /* CoreDataToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataToDoViewController.swift; path = SkillBox14/Realm/CoreDataToDoViewController.swift; sourceTree = SOURCE_ROOT; };
 		42A1EB38239D2E2E00E840BC /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		42C06FC82393CB2D001CE0AD /* RealmToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmToDo.swift; sourceTree = "<group>"; };
 		42C06FCA2393FD5C001CE0AD /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		210E941123CE3E5400CA1240 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				4296BF9323CE5A000098CA91 /* CoreDataToDoViewController.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			files = (
 				42C06FCD2393FD77001CE0AD /* Task.swift in Sources */,
 				42C06FCB2393FD5C001CE0AD /* TaskList.swift in Sources */,
+				4296BF9423CE5A000098CA91 /* CoreDataToDoViewController.swift in Sources */,
 				428E04BA2392E49400AC1F8A /* ViewController.swift in Sources */,
 				428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */,
 				428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */,

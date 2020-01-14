@@ -11,7 +11,7 @@ import UIKit
 class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableTaskList: UITableView!
-  
+    
     var models: [TaskListToDoModel] = []
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,8 +39,8 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell")
-
-       cell?.isSelected = false
+        
+        cell?.isSelected = false
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -58,11 +58,11 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     // Mark: - удаление спомощью нового метода iOS13
-
-     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let actionDelete = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
             let taskDelete = self.models[indexPath.row]
-//            tableView.deleteRows(at: [indexPath], with: .automatic )
+            //            tableView.deleteRows(at: [indexPath], with: .automatic )
             StorageManager.deleteObject(for: taskDelete)
             self.updateModels()
         }
@@ -71,7 +71,7 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     
-  // Mark: - Настройка Action добовления
+    // Mark: - Настройка Action добовления
     
     @IBAction func addTaskList(_ sender: UIBarButtonItem) {
         
@@ -89,11 +89,11 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.updateModels()
             }
         }
-            
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         actionAdd.addAction(okAction)
         actionAdd.addAction(cancelAction)
-           
+        
         self.present(actionAdd, animated: true, completion: nil)
         
     }
@@ -103,7 +103,7 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBAction func CancelAction (_ segue: UIStoryboardSegue) {}
-        
+    
 }
 
 
