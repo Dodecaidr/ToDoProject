@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213E79F223D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E79F123D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift */; };
+		213E79F523D4B23F004066BD /* ToDoDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213E79F323D4B23E004066BD /* ToDoDataBase.xcdatamodeld */; };
 		2DF779C1C0A7CC1B2BE16F4D /* Pods_SkillBox14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D31D750086A003EEE0DCD5 /* Pods_SkillBox14.framework */; };
 		428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B52392E49400AC1F8A /* AppDelegate.swift */; };
 		428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B72392E49400AC1F8A /* SceneDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213E79F123D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserDefaultsViewController.swift; sourceTree = "<group>"; };
+		213E79F423D4B23F004066BD /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
 		428E04B22392E49400AC1F8A /* SkillBox14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillBox14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428E04B52392E49400AC1F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428E04B72392E49400AC1F8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		210E941023CE3E4400CA1240 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				213E79F123D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				428E04BE2392E49500AC1F8A /* Assets.xcassets */,
 				428E04C02392E49500AC1F8A /* LaunchScreen.storyboard */,
 				428E04C32392E49500AC1F8A /* Info.plist */,
+				213E79F323D4B23E004066BD /* ToDoDataBase.xcdatamodeld */,
 			);
 			path = SkillBox14;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 				428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */,
 				428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */,
 				428E04CD2392ED5A00AC1F8A /* Persistance.swift in Sources */,
+				213E79F523D4B23F004066BD /* ToDoDataBase.xcdatamodeld in Sources */,
 				42A1EB39239D2E2E00E840BC /* StorageManager.swift in Sources */,
+				213E79F223D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift in Sources */,
 				428E04CB2392EB4B00AC1F8A /* UserDefaultsView.swift in Sources */,
 				42C06FC92393CB2D001CE0AD /* RealmToDo.swift in Sources */,
 			);
@@ -499,6 +507,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		213E79F323D4B23E004066BD /* ToDoDataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				213E79F423D4B23F004066BD /* ToDo.xcdatamodel */,
+			);
+			currentVersion = 213E79F423D4B23F004066BD /* ToDo.xcdatamodel */;
+			path = ToDoDataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 428E04AA2392E49400AC1F8A /* Project object */;
 }

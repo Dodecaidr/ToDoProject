@@ -18,7 +18,7 @@
 "OKT-ID-bzo.text" = "Label";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TcY-Ys-jou"; */
-"TcY-Ys-jou.normalTitle" = "Button";
+"TcY-Ys-jou.normalTitle" = "Core Data ToDo";
 
 /* Class = "UITextField"; placeholder = "Введите фамилию"; ObjectID = "VfR-Iw-ceh"; */
 "VfR-Iw-ceh.placeholder" = "Введите фамилию";
@@ -27,10 +27,10 @@
 "Zk8-8b-Gvd.text" = "12";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "czy-wW-35H"; */
-"czy-wW-35H.normalTitle" = "Button";
+"czy-wW-35H.normalTitle" = "Core Data UserDefaults";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kkR-2l-ZIr"; */
-"kkR-2l-ZIr.normalTitle" = "Button";
+"kkR-2l-ZIr.normalTitle" = "lknlk";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "orK-Ns-9SV"; */
 "orK-Ns-9SV.normalTitle" = "Button";

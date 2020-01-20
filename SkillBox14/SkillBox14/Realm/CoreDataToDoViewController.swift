@@ -7,38 +7,36 @@
 //
 
 import UIKit
+import CoreData
 
 class CoreDataToDoViewController: UITableViewController {
     
-    var toDoItems: [String] = []
+    var toDoItems: [TaskCoreData] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+          loadDataTask ()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+      
     }
     
     // MARK: - Table view data source
     
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+        
         return toDoItems.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        cell.textLabel?.text = toDoItems[indexPath.row ]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let task = toDoItems[indexPath.row ]
+        
+        cell.textLabel?.text = task.taskToDo
         
         return cell
     }
@@ -54,8 +52,8 @@ class CoreDataToDoViewController: UITableViewController {
         
         let okAction = UIAlertAction(title: "ok", style: .default) { _ in
             if actionAdd.textFields?.first?.text != nil {
-                self.toDoItems.append((actionAdd.textFields?.first!.text)!)
-
+                
+                self.saveTask(taskToDo: (actionAdd.textFields?.first!.text)!)
                 self.tableView.reloadData()
             }
         }
@@ -68,6 +66,37 @@ class CoreDataToDoViewController: UITableViewController {
         
     }
     
+    //Mark: - Button table
     
+    func saveTask(taskToDo: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistenContainer.viewContext
+        
+        let entity = NSEntityDescription.entity(forEntityName: "TaskCoreData", in: context)
+        let taskObject = NSManagedObject(entity: entity!, insertInto: context) as! TaskCoreData
+        taskObject.taskToDo = taskToDo
+        print("save complite")
+        
+        do {
+            try context.save()
+            toDoItems.append(taskObject)
+        } catch {
+            print(error.localizedDescription )
+        }
+    }
+    
+    //Mark: - rest func
+    private func loadDataTask () {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistenContainer.viewContext
+        
+        let fetchRequest: NSFetchRequest<TaskCoreData> = TaskCoreData.fetchRequest()
+        
+        do {
+            toDoItems = try context.fetch(fetchRequest)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
     
 }
