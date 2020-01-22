@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		212EEA2523D62968004B03E7 /* StructJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EEA2423D62968004B03E7 /* StructJSON.swift */; };
 		212EEA2923D62CD2004B03E7 /* JSonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EEA2823D62CD2004B03E7 /* JSonRequest.swift */; };
 		212EEA2D23D63AD6004B03E7 /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212EEA2C23D63AD6004B03E7 /* WeatherTableViewController.swift */; };
 		213E79F223D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E79F123D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift */; };
 		213E79F523D4B23F004066BD /* ToDoDataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 213E79F323D4B23E004066BD /* ToDoDataBase.xcdatamodeld */; };
 		2DF779C1C0A7CC1B2BE16F4D /* Pods_SkillBox14.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D31D750086A003EEE0DCD5 /* Pods_SkillBox14.framework */; };
+		422EFBC723D8B640001DBB9D /* JSonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422EFBC623D8B640001DBB9D /* JSonStruct.swift */; };
+		422EFBC923D8B828001DBB9D /* WetherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422EFBC823D8B828001DBB9D /* WetherCell.swift */; };
 		428E04B62392E49400AC1F8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B52392E49400AC1F8A /* AppDelegate.swift */; };
 		428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B72392E49400AC1F8A /* SceneDelegate.swift */; };
 		428E04BA2392E49400AC1F8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428E04B92392E49400AC1F8A /* ViewController.swift */; };
@@ -29,12 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		212EEA2423D62968004B03E7 /* StructJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StructJSON.swift; path = "../../../../../ДЗ урок 13/JSON_Openweathermap/SkillBox13/StructJSON.swift"; sourceTree = "<group>"; };
 		212EEA2823D62CD2004B03E7 /* JSonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSonRequest.swift; sourceTree = "<group>"; };
 		212EEA2B23D633CE004B03E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		212EEA2C23D63AD6004B03E7 /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
 		213E79F123D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserDefaultsViewController.swift; sourceTree = "<group>"; };
 		213E79F423D4B23F004066BD /* ToDo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDo.xcdatamodel; sourceTree = "<group>"; };
+		422EFBC623D8B640001DBB9D /* JSonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSonStruct.swift; sourceTree = "<group>"; };
+		422EFBC823D8B828001DBB9D /* WetherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetherCell.swift; sourceTree = "<group>"; };
 		428E04B22392E49400AC1F8A /* SkillBox14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkillBox14.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428E04B52392E49400AC1F8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		428E04B72392E49400AC1F8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,9 +108,10 @@
 		212EEA2323D6287F004B03E7 /* JSON_Openweathermap */ = {
 			isa = PBXGroup;
 			children = (
-				212EEA2423D62968004B03E7 /* StructJSON.swift */,
 				212EEA2823D62CD2004B03E7 /* JSonRequest.swift */,
+				422EFBC623D8B640001DBB9D /* JSonStruct.swift */,
 				212EEA2C23D63AD6004B03E7 /* WeatherTableViewController.swift */,
+				422EFBC823D8B828001DBB9D /* WetherCell.swift */,
 			);
 			path = JSON_Openweathermap;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				42C06FCD2393FD77001CE0AD /* Task.swift in Sources */,
 				212EEA2D23D63AD6004B03E7 /* WeatherTableViewController.swift in Sources */,
+				422EFBC723D8B640001DBB9D /* JSonStruct.swift in Sources */,
 				42C06FCB2393FD5C001CE0AD /* TaskList.swift in Sources */,
 				4296BF9423CE5A000098CA91 /* CoreDataToDoViewController.swift in Sources */,
 				428E04BA2392E49400AC1F8A /* ViewController.swift in Sources */,
@@ -319,7 +323,7 @@
 				428E04B82392E49400AC1F8A /* SceneDelegate.swift in Sources */,
 				428E04CD2392ED5A00AC1F8A /* Persistance.swift in Sources */,
 				212EEA2923D62CD2004B03E7 /* JSonRequest.swift in Sources */,
-				212EEA2523D62968004B03E7 /* StructJSON.swift in Sources */,
+				422EFBC923D8B828001DBB9D /* WetherCell.swift in Sources */,
 				213E79F523D4B23F004066BD /* ToDoDataBase.xcdatamodeld in Sources */,
 				42A1EB39239D2E2E00E840BC /* StorageManager.swift in Sources */,
 				213E79F223D4AFAD004066BD /* CoreDataUserDefaultsViewController.swift in Sources */,
