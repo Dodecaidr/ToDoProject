@@ -48,9 +48,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt9-N9-aII">
-                                <rect key="frame" x="158" y="484" width="30" height="30"/>
+                                <rect key="frame" x="112" y="484" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ваы"/>
+                                <state key="normal" title="Openweathermap"/>
+                                <connections>
+                                    <segue destination="1Ef-YM-8dv" kind="show" id="5l9-a1-Hh5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -139,6 +142,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BwL-4Y-6x8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1294" y="466"/>
+        </scene>
+        <!--Weather Table View Controller-->
+        <scene sceneID="o3u-ZQ-Lim">
+            <objects>
+                <tableViewController id="1Ef-YM-8dv" customClass="WeatherTableViewController" customModule="SkillBox14" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MZw-gh-mbe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="74" id="7N5-XS-hMl">
+                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7N5-XS-hMl" id="86f-kx-OjR">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1Ef-YM-8dv" id="DSz-gQ-up4"/>
+                            <outlet property="delegate" destination="1Ef-YM-8dv" id="wgl-Bh-TmW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Rnf-xY-Dc9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0Y-cr-dyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245.59999999999999" y="1177.961019490255"/>
         </scene>
         <!--Core Data ToDo-->
         <scene sceneID="TJu-VG-iw8">
