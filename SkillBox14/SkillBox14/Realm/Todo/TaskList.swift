@@ -57,12 +57,11 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    // Mark: - удаление спомощью нового метода iOS13
     
+    // Mark: - удаление спомощью нового метода iOS13
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let actionDelete = UIContextualAction(style: .destructive, title: "Delete") { (_, _, _) in
             let taskDelete = self.models[indexPath.row]
-            //            tableView.deleteRows(at: [indexPath], with: .automatic )
             StorageManager.deleteObject(for: taskDelete)
             self.updateModels()
         }
@@ -99,8 +98,6 @@ class TaskList: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     // Mark: - TabelVewDelegate
-    
-    
     
     @IBAction func CancelAction (_ segue: UIStoryboardSegue) {}
     

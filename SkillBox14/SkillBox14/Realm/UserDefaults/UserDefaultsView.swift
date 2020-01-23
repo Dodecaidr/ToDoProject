@@ -8,7 +8,7 @@
 import UIKit
 
 class UserDefaultsView: UIViewController {
-
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -20,7 +20,7 @@ class UserDefaultsView: UIViewController {
         nameLabel.text = Persistance.shered.userName
         surnameLabel.text = Persistance.shered.userSurnamame
     }
-
+    
     @IBAction func updateButton(_ sender: Any) {
         
         Persistance.shered.userName = nameTextField.text
@@ -29,6 +29,7 @@ class UserDefaultsView: UIViewController {
         surnameLabel.text = Persistance.shered.userSurnamame
     }
     
+    // Mark: - настройка касаний
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField.resignFirstResponder()
         surnameTextField.resignFirstResponder()

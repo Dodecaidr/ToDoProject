@@ -44,7 +44,7 @@ class Task: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func updateModels() {
         var models: [TaskListToDoModel] = []
         models = StorageManager.tasks()
-        let modelsFilter = models.filter({/*$0.id == self.model?.id*/self.model?.id == $0.id})
+        let modelsFilter = models.filter({self.model?.id == $0.id})
         model = modelsFilter.first
         DispatchQueue.main.async {
             self.tableTask.reloadData()

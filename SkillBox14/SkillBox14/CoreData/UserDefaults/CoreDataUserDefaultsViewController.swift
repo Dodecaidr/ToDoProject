@@ -57,7 +57,6 @@ class CoreDataUserDefaultsViewController: UIViewController {
             
             do {
                 try context.save()
-                //      toDoItems.append(taskObject)
             } catch {
                 print(error.localizedDescription )
             }
@@ -65,7 +64,7 @@ class CoreDataUserDefaultsViewController: UIViewController {
             nameTextLable.text = userDataObject.name
             surnameTextLable.text = userDataObject.surname
             
-            // Использовать функцию перезагрузки вью для того что бы небыло перезаписи при первом запуске
+            self.viewDidLoad() // Используется перезагрузка вью для того что бы небыло перезаписи при первом запуске приложени
             
         } else {
             
@@ -77,6 +76,7 @@ class CoreDataUserDefaultsViewController: UIViewController {
         
     }
     
+    // Mark: - настройка касаний по экрану
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         nameTextField.resignFirstResponder()
         surnameTextField.resignFirstResponder()

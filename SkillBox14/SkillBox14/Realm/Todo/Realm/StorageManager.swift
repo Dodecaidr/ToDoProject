@@ -29,10 +29,6 @@ class StorageManager {
         let realm = try! Realm()
         let predicate = NSPredicate(format: "id == %@", argumentArray: [task.id])
         if let object = realm.objects(TaskListToDo.self).filter(predicate).first {
-             // if let object = task.filter({$0.id == task?.id}) {
-            //            let objectsFilter = realm.objects(TaskListToDo.self).filter(predicate)
-            //            let objectFilter = objectsFilter.filter({$0.id == task.id})
-            //            if let object = objectFilter.first {
             try! realm.write {
                 object.name = task.name
                 realm.delete(object.tasks)
@@ -87,9 +83,9 @@ class StorageManager {
         let realms = try! Realm()
         let predicate = NSPredicate(format: "id == %@", argumentArray: [task.id])
         if let object = realms.objects(TaskToDo.self).filter(predicate).first {
-        try! realms.write {
-            realms.delete(object)
-        }
+            try! realms.write {
+                realms.delete(object)
+            }
         }
     }
 }

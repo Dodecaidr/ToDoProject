@@ -17,9 +17,11 @@ class JSonRequest {
                 do {
                     let cityWether = try JSONDecoder().decode(Request.self, from: data)
                     var listAloma: [Weather] = []
+                    WetherManager.deliteObject()
                     cityWether.list.forEach { weather in
                         if let weather = weather {
                             listAloma.append(weather)
+                            WetherManager.saveObject(data: weather.dt_txt!, image: (weather.weather[0]?.icon)!, temperature: Int ((weather.main?.temp)!))
                         }
                     }
                     callback(listAloma)

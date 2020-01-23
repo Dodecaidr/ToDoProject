@@ -15,12 +15,12 @@ class CoreDataToDoViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-          loadDataTask ()
+        loadDataTask ()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
     }
     
     // MARK: - Table view data source
